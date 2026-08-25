@@ -1,10 +1,13 @@
 .user-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.1rem;
 }
 
 .user-list__empty {
-  color: #777;
+  color: var(--text);
   font-style: italic;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem 0;
 }

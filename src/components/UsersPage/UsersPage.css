@@ -1,30 +1,50 @@
 .users-page {
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 3rem;
   text-align: left;
 }
 
+.users-page__header {
+  margin-bottom: 1.5rem;
+}
+
 .users-page__title {
-  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.users-page__subtitle {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
 }
 
 .users-page__controls {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   flex-wrap: wrap;
 }
 
 .users-page__refetch-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  border: 1px solid #646cff;
-  background: #646cff;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.users-page__refetch-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.users-page__refetch-btn:active:not(:disabled) {
+  transform: scale(0.97);
 }
 
 .users-page__refetch-btn:disabled {
@@ -33,7 +53,9 @@
 }
 
 .users-page__status {
-  color: #333;
+  color: var(--text);
+  padding: 2rem 0;
+  text-align: center;
 }
 
 .users-page__status--error {

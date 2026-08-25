@@ -1,13 +1,36 @@
+.search-bar-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+}
+
+.search-bar-wrap svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text);
+  pointer-events: none;
+}
+
 .search-bar {
   width: 100%;
-  max-width: 320px;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 0.6rem 0.75rem 0.6rem 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   font-size: 0.95rem;
+  background: var(--bg);
+  color: var(--text-h);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-bar::placeholder {
+  color: var(--text);
 }
 
 .search-bar:focus {
   outline: none;
-  border-color: #646cff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }

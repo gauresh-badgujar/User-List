@@ -29,7 +29,14 @@ export function UsersPage() {
 
   return (
     <div className="users-page">
-      <h1 className="users-page__title">Users</h1>
+      <header className="users-page__header">
+        <div>
+          <h1 className="users-page__title">Users</h1>
+          <p className="users-page__subtitle">
+            {users ? `${filteredUsers.length} of ${users.length} people` : "Directory"}
+          </p>
+        </div>
+      </header>
 
       <div className="users-page__controls">
         <SearchBar value={search} onChange={setSearch} />
@@ -38,11 +45,11 @@ export function UsersPage() {
           onClick={() => refetch()}
           disabled={isFetching}
         >
-          {isFetching ? "Refreshing..." : "Refetch Users"}
+          {isFetching ? "Refreshing…" : "Refetch Users"}
         </button>
       </div>
 
-      {isLoading && <p className="users-page__status">Loading users...</p>}
+      {isLoading && <p className="users-page__status">Loading users…</p>}
 
       {isError && (
         <p className="users-page__status users-page__status--error">
