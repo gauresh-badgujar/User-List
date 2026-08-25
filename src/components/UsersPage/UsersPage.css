@@ -1,0 +1,41 @@
+.users-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.users-page__title {
+  margin-bottom: 1rem;
+}
+
+.users-page__controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.users-page__refetch-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #646cff;
+  background: #646cff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.users-page__refetch-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.users-page__status {
+  color: #333;
+}
+
+.users-page__status--error {
+  color: #d33;
+}
