@@ -1,13 +1,45 @@
-.user-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.1rem;
+.directory {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+  overflow: hidden;
 }
 
-.user-list__empty {
+.directory__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.directory__head {
+  display: grid;
+  grid-template-columns: 52px minmax(160px, 1.3fr) minmax(160px, 1.2fr) minmax(130px, 1fr) minmax(100px, 0.8fr);
+  gap: 1.25rem;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--social-bg);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--text);
-  font-style: italic;
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .directory {
+    border: none;
+    background: none;
+    border-radius: 0;
+  }
+
+  .directory__head {
+    display: none;
+  }
+
+  .directory__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
 }
